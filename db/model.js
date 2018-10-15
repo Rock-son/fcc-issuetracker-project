@@ -10,22 +10,22 @@ if (process.env.NODE_ENV !== "production") {
 const issueSchema = new Schema({
 
 	project: {
-		type: String, required: true, trim: true, lowercase: true
+		type: String, required: true, trim: true
 	},
 	issue_title: {
-		type: String, required: true, trim: true, lowercase: true
+		type: String, required: true, trim: true
 	},
 	issue_text: {
-		type: String, required: true, trim: true, lowercase: true
+		type: String, required: true, trim: true
 	},
 	created_by: {
-		type: String, required: true, trim: true, lowercase: true
+		type: String, required: true, trim: true
 	 },
 	assigned_to : {
-		type: String, default: "", trim: true, lowercase: true
+		type: String, default: "", trim: true
 	 },
 	status_text: {
-		type: String, default: "", trim: true, lowercase: true
+		type: String, default: "", trim: true
 	 },
 	created_on: {
 		type: Date, default: new Date()
