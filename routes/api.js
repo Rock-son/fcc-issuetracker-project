@@ -19,6 +19,8 @@ const CONNECTION_STRING = process.env.DB; //MongoClient.connect(CONNECTION_STRIN
 
 mongoose.Promise = global.Promise;
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true, autoIndex: false });
+mongoose.set('useFindAndModify', false);
+
 
 module.exports = function (app) {
 
