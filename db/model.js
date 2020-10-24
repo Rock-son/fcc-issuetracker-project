@@ -36,7 +36,15 @@ const issueSchema = new Schema({
 	open: {
 		type: Boolean, default: true
 	}
-});
+},
+	{ 
+		writeConcern: {
+			w: 'majority',
+			j: true,
+			wtimeout: 1000
+		}
+	}
+);
 
 // UPDATE TIME
 issueSchema.pre("save", function a(next) {

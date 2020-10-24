@@ -166,7 +166,7 @@ suite('Functional Tests', function() {
       test('One filter', function(done) {
         chai.request(server)
 			.get('/api/issues/test')
-			.query({ open: false})
+			.query({ open: true})
 			.end(function(err, res){
 				assert.equal(res.status, 200);
 				assert.isArray(res.body);
@@ -188,7 +188,7 @@ suite('Functional Tests', function() {
 			.get('/api/issues/test')
 			.query({
 				open: true,
-				issue_title: "UPDATED"
+				issue_title: "Title"
 			})
 			.end(function(err, res){
 				assert.equal(res.status, 200);
